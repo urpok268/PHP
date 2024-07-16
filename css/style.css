@@ -1,0 +1,311 @@
+body{
+	background-image: linear-gradient(to bottom,#156496 0%,#08324b 100%);
+	padding: 10px 0px 10px 0px;
+}
+.calendar-item {
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 16px 20px;
+	font: 24px/1.2 Arial, sans-serif;
+	width: 100%;
+	box-sizing: border-box;
+}
+.calendar-head {
+	padding: 5px;
+	font-weight: 700;
+	font-size: 20px;
+	text-align: center;
+	color: #156496;
+	text-transform: uppercase;
+	font-size: 25px;
+}
+.calendar-item table {
+	border-collapse: collapse;
+	width: 100%;
+}
+.calendar-item th {
+	font-size: 18px;
+	padding: 6px 7px;
+	text-align: center;
+	color: #888;
+	font-weight: normal;
+}
+.calendar-item td {
+	font-size: 20px;
+	padding: 20px 0px;
+	text-align: center;
+}
+.calendar-item tr th:nth-child(6), .calendar-item tr th:nth-child(7),
+.calendar-item tr td:nth-child(6), .calendar-item tr td:nth-child(7)  {
+	color: #e65a5a;
+}	
+.calendar-day.last {
+	color: #999 !important;
+}
+.circleDay{
+	padding: 7px;
+	border-radius: 10px;
+}
+
+.calendar-day.event .circleDay {
+	background: #ffe2ad;
+	position: relative;
+	cursor: pointer;
+}
+.calendar-day.event:hover .calendar-popup {
+	display: block;
+}
+.calendar-day:hover > .circleDay{
+	background: #CBE5F0;
+}
+.calendar-day.selected .circleDay {
+	background: white;
+	box-shadow: 0px 0px 2px 2px rgba(18, 123, 204, 1) inset;
+	color: black;
+}
+.calendar-day.today .circleDay {
+	font-weight: bold;
+	background: #156496;
+	color: white;
+	box-shadow: none;
+}
+
+.calendar-popup {
+	display: none;
+	position: absolute;
+	top: 40px;
+	left: 0;
+	min-width: 200px;
+	padding: 15px;
+	background: #fff;
+	text-align: left;
+	font-size: 13px;
+	z-index: 100;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	color: #000;
+}
+.calendar-popup:before {
+	content: ""; 
+	border: solid transparent;
+	position: absolute;    
+	left: 8px;    
+	bottom: 100%;
+	border-bottom-color: #fff;
+	border-width: 9px;
+	margin-left: 0;
+}
+.calendar-day {
+	cursor: pointer;
+	border-radius: 200px;
+}
+.edit-menu{
+	display: none;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	background-color: white;
+}
+@keyframes closeColoring {
+  from {
+    background-color: white;
+    color: red;
+  }
+
+  to {
+    background-color: red;
+    color: white;
+  }
+}
+.close{
+	color: red;
+	padding: 10px;
+	border: solid 1px;
+	display: inline-block;
+	cursor: pointer;
+	font-weight: bolder;
+}
+.close:hover{
+	animation: closeColoring 1s alternate;
+	background-color: red;
+    	color: white;
+}
+@keyframes coloringGreen {
+  from {
+    background: #4676D7;
+  }
+
+  to {
+    background: #678CD5;
+  }
+}
+@keyframes uncoloringGreen {
+  from {
+    background: #678CD5;
+  }
+
+  to {
+    background: #4676D7;
+  }
+}
+.butAdd{
+	appearance: none;
+	border: 0;
+	border-radius: 5px;
+	background: #4676D7;
+	color: #fff;
+	padding: 8px 16px;
+	font-size: 16px;
+}
+.butAdd:hover{
+	animation: coloringGreen .5s alternate;
+	background: #678CD5;
+}
+.butAdd:not(:hover) {
+	animation: uncoloringGreen .5s alternate;
+	background: #4676D7;
+}
+.butAdd:active{
+	box-shadow: 0px 0px 16px 19px rgba(34, 60, 80, 0.2) inset;
+}
+textarea{
+	font-size: 0.8rem;
+	letter-spacing: 1px;
+	padding: 10px;
+	max-width: 100%;
+	line-height: 1.5;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+	box-shadow: 1px 1px 1px #999;
+}
+.leftPannel{
+	background-color: #156496;
+	padding-right: 5px;
+	width: 10%;
+	box-shadow: 5px 0 18px -3px #156496;
+	box-sizing: border-box;
+}
+.rightPannel{
+	background-color: #156496;
+	color: white;
+	width: 30%;
+	vertical-align: top;
+	padding-top: 50px;
+	box-sizing: border-box;
+}
+.centralPannel{
+	width: 60vw;
+	padding-right: 40px;
+	box-sizing: border-box;
+}
+#leftPannel{
+	background-color: #156496;
+	padding-right: 5px;
+	width: 10%;
+	box-shadow: 5px 0 18px -3px #156496;
+	box-sizing: border-box;
+}
+#rightPannel{
+	background-color: #156496;
+	color: white;
+	width: 30%;
+	vertical-align: top;
+	padding-top: 50px;
+	box-sizing: border-box;
+}
+#centralPannel{
+	width: 60vw;
+	padding-right: 40px;
+	box-sizing: border-box;
+}
+.monthButton{
+	background-color: rgba(0, 0, 0, 0);
+	border: 0px;
+	padding: 9px 30px;
+	border-radius: 0 25px 25px 0;
+	color: white;
+	cursor: pointer;
+}
+.monthButton:hover{
+	background-color: #115079;
+}
+.hr{
+	opacity: 0.8;
+	margin: 0px 20px 0px 20px;
+}
+.eventHead{
+	margin-left: 20px;
+	text-transform: uppercase;
+	font-weight: 900;
+	font-size: 30px;
+	width: 100%;
+	box-sizing: border-box;
+}
+.rightEvent{
+	border: 1px solid white;
+	padding: 15px 10px;
+	background-color: #387BA6;
+}
+.rightEvents{
+	margin: 20px;
+}
+.events{
+	margin: 20px;
+	background-color: #387BA6;	
+	
+}
+.section{
+	background-color: white;
+	width: 100%;
+	box-sizing: border-box;
+}
+.console-log{
+	background-color: white;
+	display: inline-block;
+	padding: 13px 10px 10px 10px;
+	border-radius: 8px;
+	margin: 10px auto 30px auto;
+	box-shadow: 0 10px 20px -5px rgba(19, 31, 51, .65);
+	box-sizing: border-box;
+}
+.yearChangePannel{
+	color: white;
+	font-size: 28px;
+	text-align: center;
+	margin-bottom: 20px;
+	white-space: nowrap;
+}
+.yearChange{
+	background-color: rgba(0,0,0,0);
+	border: 0px;
+	color: white;
+	font-size: 35px;
+	font-weight: 900;
+}
+.circle{
+	padding: 5px;
+	border-radius: 5px;
+	display: inline-block;
+	margin-bottom: 8px;
+	margin-right: 10px;
+}
+#red{
+	background-color: #FF5F56;
+}
+#yellow{
+	background-color: #FFBD2E;
+}
+#green{
+	background-color: #27C93F;
+}
+input[type="radio"]{
+	position: absolute;
+	width: 1em;
+	height: 1em;
+	visibility:hidden;
+}
+.monthSelected{
+	background-color: #0E4162;
+}
