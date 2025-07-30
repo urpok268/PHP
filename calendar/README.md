@@ -10,7 +10,7 @@
 **PHP Interactive Calendar** — это современное веб‑приложение-календарь с чистым и понятным интерфейсом, реализованное на PHP, JavaScript и CSS (Flexbox & Grid). Позволяет удобно просматривать месяцы, выбирать даты и назначать/просматривать события.
 
 <p align="center">
-  <img src="calendar/screen.png" alt="Календарь – демонстрация" width="700"/>
+  <img src="https://github.com/urpok268/PHP/blob/main/calendar/screen.png" alt="Календарь – демонстрация" width="700"/>
 </p>
 
 ---
